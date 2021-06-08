@@ -2,10 +2,10 @@
 export default (arr) => {
   const cap = arr.filter(booger =>
     (booger[0] !== 'F') && (booger[0] !== 'f'));
-  const cap2 = arr.map(booger =>
+  const upperCap = cap.map(booger =>
     booger.toUpperCase());
 
 
-  return cap;
+  return upperCap;
 
 };
