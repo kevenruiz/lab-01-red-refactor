@@ -1,14 +1,11 @@
 /* eslint-disable keyword-spacing */
 export default (arr) => {
-  const cap = [];
-  for (const booger of arr) {
-    if ((booger[0] !== 'F') && (booger[0] !== 'f')) {
-      cap.push(booger.toUpperCase());
+  const cap = arr.filter(booger =>
+    (booger[0] !== 'F') && (booger[0] !== 'f'));
+  const cap2 = arr.map(booger =>
+    booger.toUpperCase());
 
 
-    }
-
-
-  }
   return cap;
+
 };
