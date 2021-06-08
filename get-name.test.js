@@ -1,6 +1,7 @@
 import getName from './get-name.js';
 import copyAndPush from './copy-and-push.js';
 import capitalizeAndFilter from './search-filter.js';
+import { fetchQuote } from './fetch-quote.js';
 
 
 describe('get name', () => {
@@ -28,4 +29,20 @@ describe('get name', () => {
     expect(filteredArray).toEqual(['NOT THIS']);
 
   });
+
+
+
+  test('', async () => {
+
+    const expected =
+    {
+      name: expect.any(String),
+      text: expect.any(String),
+      image: expect.any(String)
+    };
+    const actual = await fetchQuote();
+    expect(expected).toEqual(actual);
+  });
+
+
 });
