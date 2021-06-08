@@ -13,4 +13,10 @@ describe('get name', () => {
     expect(newArr).toEqual([1, 2, 3, 4]);
 
   });
+  test('making sure the original array doesnt change', () => {
+    const arr = [1, 2, 3];
+
+    expect(arr).toEqual([1, 2, 3]);
+
+  });
 });
