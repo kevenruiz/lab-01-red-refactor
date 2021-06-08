@@ -23,7 +23,7 @@ describe('get name', () => {
   });
 
   test('capitalize and filter by letter F/f', () => {
-    const arrayOfStrings = ['Five feet of fury', 'five little feet', 'NOT THIS'];
+    const arrayOfStrings = ['Five feet of fury', 'five little feet', 'not this'];
     const filteredArray = capitalizeAndFilter(arrayOfStrings);
     expect(filteredArray).toEqual(['NOT THIS']);
 
