@@ -1,5 +1,7 @@
 import getName from './get-name.js';
 import copyAndPush from './copy-and-push.js';
+import capitalizeAndFilter from './search-filter.js';
+
 
 describe('get name', () => {
   test('grabs name', () => {
@@ -17,6 +19,13 @@ describe('get name', () => {
     const arr = [1, 2, 3];
 
     expect(arr).toEqual([1, 2, 3]);
+
+  });
+
+  test('capitalize and filter by letter F/f', () => {
+    const arrayOfStrings = ['Five feet of fury', 'five little feet', 'NOT THIS'];
+    const filteredArray = capitalizeAndFilter(arrayOfStrings);
+    expect(filteredArray).toEqual(['NOT THIS']);
 
   });
 });
